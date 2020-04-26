@@ -11,6 +11,32 @@ for (var i = 0; i < links.length; ++i){
         urls.push(l)
     }
 }
+
+function createElementFromHTML(htmlString) {
+    var div = document.createElement('div');
+    div.innerHTML = htmlString.trim();
+    return div.firstChild; 
+}
+  
+const setDOMInfo = info => {
+    if (info){
+        var el = document.createElement('div');
+        el.className = "links_footer";
+        el.appendChild(createElementFromHTML("<h6 class='col-12'>"+info.length+"</h6>"));
+
+        console.log(el);
+        for (var i = 0; i < info.length; ++i){
+            for (var j = 0; j < info[i].length; ++j){
+                let html = "<h6 class='col-6 m-3' ><a target='_blank' href='"+info[i][j].link+"'>"+info[i][j].email+"</a></h6>";
+                let sub_el = createElementFromHTML(html);
+                el.appendChild(sub_el)
+            }
+        }
+        document.body.appendChild(el)
+    }
+};
+
+
 const grabContent = url => fetch(url)
     .then(res => res.text())
     .then(function(html){
@@ -43,11 +69,13 @@ const grabContent = url => fetch(url)
 Promise
     .all(urls.map(grabContent))
     .then((d) => {
+        setDOMInfo(d);
         chrome.runtime.onMessage.addListener((msg, sender, response) =>{
-            // First, validate the message's structure.
             if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
               response(d);
             }
         });
 })
+  
+
 

@@ -7,32 +7,38 @@
 .ml-5p{
     margin-left: 5%;
 }
+.m-3{
+    margin: 1.5rem;
+}
 .col-6{
     width: 40%;
 }
 .col-12{
     width: 100%;
 }
-.net-fast-watched-button, .net-fast-blacklist-button{
-    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
-    cursor:pointer;
-    vertical-align:middle;
-    padding: 5px;
-    text-align: center;
-    margin-top: 15px;
+.links_footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    overflow: auto;
 }
 
-.net-fast-watched-button{
-    border:1px solid #CCC;
-    background:#DDD;
-    color:#444;
+.links_footer a:link {
+    color: green;
 }
-.net-fast-blacklist-button{
-    border:1px solid #f23122;;
-    background:#f23122;
-    color:#FFFFFF;
+/* visited link */
+.links_footer a:visited {
+    color: green;
 }
-
-.net-fast-d-none{
-    display: none !important;
+  
+/* mouse over link */
+.links_footer a:hover {
+    color: red;
+}
+/* selected link */
+.links_footer a:active {
+    color: yellow;
 }
