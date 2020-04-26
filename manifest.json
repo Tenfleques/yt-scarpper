@@ -1,0 +1,41 @@
+{
+    "name": "Lillinks",
+    "version" : "0.0.0.1",
+    "description" : "Get Youtube about links.",
+    "permissions" : [
+        "storage", 
+        "declarativeContent", 
+        "activeTab",
+        "https://www.google.com/"
+    ],
+    "content_scripts": [
+        {
+            "matches" : ["https://socialblade.com/youtube/*"],
+            "css" : ["css/style.css"],
+            "js" : ["js/init.js"],
+            "run_at": "document_idle",
+            "all_frames": false
+        }
+    ],
+    "background" : {
+        "scripts": ["js/background.js"],
+        "persistent" : false
+    },
+    "options_page": "options.html",
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/lillinks_16.png",
+            "32": "images/lillinks_32.png",
+            "48": "images/lillinks_48.png",
+            "128": "images/lillinks_128.png"
+        }
+    },
+    "icons": {
+        "16": "images/lillinks_16.png",
+        "32": "images/lillinks_32.png",
+        "48": "images/lillinks_48.png",
+        "128": "images/lillinks_128.png"
+    },
+    "manifest_version" : 2
+}

@@ -1,0 +1,34 @@
+body {
+    width: 350px;
+    height: 90vh;
+}
+.d-none{
+    display: none;
+}
+.row{
+    display: flex;
+}
+.mr-5p{
+    margin-right: 5%;
+}
+.ml-5p{
+    margin-left: 5%;
+}
+.col-6{
+    width: 40%;
+}
+.col-12{
+    width: 100%;
+}
+.toggle_list{
+    cursor: pointer;
+}
+.toggle_list.active{
+    border-bottom: 2px solid #f23122;
+}
+.click-to-change-JAW-indicator{
+    display: none;
+}
+h5{
+    cursor: pointer;
+}

@@ -1,0 +1,38 @@
+.row{
+    display: flex;
+}
+.mr-5p{
+    margin-right: 5%;
+}
+.ml-5p{
+    margin-left: 5%;
+}
+.col-6{
+    width: 40%;
+}
+.col-12{
+    width: 100%;
+}
+.net-fast-watched-button, .net-fast-blacklist-button{
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+    cursor:pointer;
+    vertical-align:middle;
+    padding: 5px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.net-fast-watched-button{
+    border:1px solid #CCC;
+    background:#DDD;
+    color:#444;
+}
+.net-fast-blacklist-button{
+    border:1px solid #f23122;;
+    background:#f23122;
+    color:#FFFFFF;
+}
+
+.net-fast-d-none{
+    display: none !important;
+}
