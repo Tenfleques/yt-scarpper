@@ -33,7 +33,7 @@ function getEmail(obj){
 
 const setDOMInfo = info => {
   if (info){
-    let el = createElementFromHTML("<h6 class='col-12'>"+info.length+"</h6>");
+    let el = createElementFromHTML("<h6 class='col-12'> "+info.length+" links found</h6>");
     document.getElementById("all_links").appendChild(el)
     for (var i = 0; i < info.length; ++i){
       for (var j = 0; j < info[i].length; ++j){

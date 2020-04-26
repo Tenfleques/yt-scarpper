@@ -22,7 +22,7 @@ const setDOMInfo = info => {
     if (info){
         var el = document.createElement('div');
         el.className = "links_footer";
-        el.appendChild(createElementFromHTML("<h6 class='col-12'>"+info.length+"</h6>"));
+        el.appendChild(createElementFromHTML("<h6 class='col-12'> "+info.length+" links found</h6>"));
 
         console.log(el);
         for (var i = 0; i < info.length; ++i){
